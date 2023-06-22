@@ -156,10 +156,10 @@ sudo venvs/django/bin/python manage.py makemigrations
 print_green "RUNNING MIGRATIONS"
 sudo venvs/django/bin/python manage.py migrate
 
+print_green "PLEASE ENTER THE CREDENTIALS OF SUPER ADMIN USER"
+#create application super user
+sudo venvs/django/bin/python manage.py createsuperuser
+
 print_green "INSTALLATION COMPLETED BELOW IS YOUR MARIADB PASSWORD"
 
 print_green $mariadb_password
-
-#print_green "PLEASE ENTER THE CREDENTIALS OF SUPER ADMIN USER"
-#create application super user
-#sudo venvs/django/bin/python manage.py createsuperuser
